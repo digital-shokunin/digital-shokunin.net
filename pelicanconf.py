@@ -29,6 +29,7 @@ SOCIAL = (('google+','https://plus.google.com/u/0/112141969866873644503/'),
           ('twitter', 'http://twitter.com/surgeterrix'),
           ('linkedin', 'http://www.linkedin.com/profile/view?id=51799602'),
           ('lastfm', 'http://lastfm.com/user/surgeterrix'),
+          ('email', 'mailto:david.mitchell@digital-shokunin.net'),
          )
 
 
@@ -36,6 +37,7 @@ SOCIAL = (('google+','https://plus.google.com/u/0/112141969866873644503/'),
 STATIC_PATHS = ["pictures", ]
 
 # A list of files to copy from the source to the destination
-FILES_TO_COPY = (('extra/robots.txt', 'robots.txt'),)
+FILES_TO_COPY = (('extra/robots.txt', 'robots.txt'),
+                 ('extra/favicon.ico', 'favicon.ico'),)
 
 DEFAULT_PAGINATION = 10
