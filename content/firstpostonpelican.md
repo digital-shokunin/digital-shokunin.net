@@ -6,9 +6,9 @@ Slug: first-post-pelican
 Author: David Mitchell
 Summary: First post using Pelican blogging platform
 
-This is my first post using Pelican as my new blogging platform. I had considered using [OctoPress](http://www.octopress.org) but encountered too much trouble getting the ruby stack to work properly without dependency problems, even following directions or tutorials. So I looked for a Python alternative and found [Pelican](http://docs.notmyidea.org/alexis/pelican/). I found it was much simpler to get running just following the directions. Plus, I know Python, so I'm obviously more comfortable with it then Ruby. Ruby I've never dealt with directly until OctoPress and my prior experience only included reading about it.
+This is my first post using Pelican as my new blogging platform. I had considered using [OctoPress](http://www.octopress.org) but encountered too much trouble getting the ruby stack to work properly without dependency problems, even following directions or tutorials. So I looked for a Python alternative and found [Pelican](http://docs.notmyidea.org/alexis/pelican/). I found it was much simpler to get running just following the directions. Plus, I know Python, so I'm obviously more comfortable with it then Ruby. I've never dealt with Ruby directly until OctoPress and my prior experience only included reading about it.
 
-I am using AWS to host this, AWS EC2 host or S3 bucket are securely configured to only allow login through ssh with a private key. This makes it difficult to simply publish over ssh. Some changes need to be made to the site Makefile to allow for this.
+I am using AWS to host this, and an AWS EC2 host or S3 bucket is securely configured to only allow login through ssh with a private key file. This makes it difficult to simply publish over ssh with the default authentication. Some changes need to be made to the site Makefile to allow for this.
 
 On line 18:
 
@@ -32,5 +32,5 @@ For some reason, this type of blogging platform seems more elegant then a CMS li
 
 I need some time to go through all the [themes](https://github.com/getpelican/pelican-themes) for Pelican but so far I like the simple look of the default template. I may either tweak it or try out some of the other themes.
 
-I also have some other things to work on this site, get used to using markdown, adding some more content, and testing the limitations of Pelican.
+I also have some other things to work on or learn about for this site, like getting used to using markdown, adding some more content, and testing the limitations of Pelican.
     
