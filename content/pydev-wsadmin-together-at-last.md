@@ -24,13 +24,14 @@ wsadmin, I was a little more then excited. This can save me a lot of time writin
 The [steps](http://www.ibm.com/developerworks/websphere/techjournal/1209_vansickel/1209_vansickel.html) are fairly 
 straight forward, install Eclipse and PyDev if you haven't already done so, and download [Jython](http://www.jython.org/).
 You then configure PyDev to use the Jython jar as your Python interpreter. They provide a script that customizes the 
-Jython environment to use wsadmin.
+Jython environment to use wsadmin. However, I found that in one of the fields, you provide a directory for it to put the 
+pre-defined Admin modules, you need to escape any slashes between directory names or the path gets mucked up.
 
 	:::wsadmin
  	wsadmin.bat/sh -host <DM_HOST> -port <SOAP_PORT> 
 	-profile WSAdminProfile.py
 	-f GeneratePyPredefs.py	
-	-pypredefsDir <PREDEFINED_COMPLETIONS>
+	-pypredefsDir "C:\\workspaces\\adminobj"
 
-Overall, the setup is pretty straight forward, if you want to try it yourself, the full instructions along with the 
+Otherwise, the setup is pretty straight forward, if you want to try it yourself, the full instructions along with the 
 necessary scripts are [here](http://www.ibm.com/developerworks/websphere/techjournal/1209_vansickel/1209_vansickel.html).
