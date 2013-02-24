@@ -26,9 +26,9 @@ straight forward, install Eclipse and PyDev if you haven't already done so, and 
 You then configure PyDev to use the Jython jar as your Python interpreter. They provide a script that customizes the 
 Jython environment to use wsadmin.
 
-  :::wsadmin script
-  wsadmin.bat/sh -host <DM_HOST> -port <SOAP_PORT> 
-  -profile WSAdminProfile.py
+	:::wsadmin
+ 	wsadmin.bat/sh -host <DM_HOST> -port <SOAP_PORT> 
+	-profile WSAdminProfile.py
 	-f GeneratePyPredefs.py	
 	-pypredefsDir <PREDEFINED_COMPLETIONS>
 
