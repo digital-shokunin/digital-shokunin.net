@@ -12,7 +12,7 @@ allows you to issue commands in a single server or network deployment (multiple 
 or "cell"). If you are reading this you probably know all about it and its support for Python, or Jython environment as
 a language to issue commands and run scripts to handle a variety of tasks.
 
-Most of us who write scripts for it write our scripts in a text editor and then manually execute them or test small 
+Most of us who write scripts for it, write our scripts in a text editor and then manually execute them or test small 
 portions of our script in a separate command line window. This can be tedious at best, those of us that use an IDE
 have the issue that the standard Python interpreter doesn't respect the Websphere modules and it shows errors for 
 portions of code that are perfectly valid inside wsadmin.
