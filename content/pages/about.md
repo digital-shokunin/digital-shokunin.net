@@ -16,4 +16,22 @@ What I do in my free time (and probably the majority of what this blog will be a
 
 I also have a lot of projects at home involving my various Linux boxes, the [Raspberry Pi](http://www.raspberrypi.org), an arcade cabinet, this web site, and whatever else I end up working on. I am also a new father, so that will likely cut into my project time, or the nature of the projects will change as my daughter becomes older.
 
+	::PGP Public Key
+        -----BEGIN PGP PUBLIC KEY BLOCK-----
+	Version: OpenPGP.js v.1.20130228
+	Comment: http://openpgpjs.org
+	
+	xo0EUU+eJQEEAIEv25OGLs/g9IlkN26FzIiJldDHXOvBCEJmEA70ZkPmoGwi
+	6frf8lwQe64WpjmOy/UuN9vKj++3+KCW0WT4DHcT8I4BWU6PDsY+PiU20b4e
+	+B8TdenAL5PI50KMudb51qhMu+IWLKmzfSilOLpXNzg+mzI3WTIuSrv1tF0a
+	YC69ABEBAAHNNERhdmlkIE1pdGNoZWxsIDxkYXZpZC5taXRjaGVsbEBkaWdp
+	dGFsLXNob2t1bmluLm5ldD7CnAQQAQIAEAUCUU+eJgkQRbhEogPDEzsAAB2E
+	A/9PHV5ViBCGPy7ehdNgi0g9cZwdIrKH3oT6F3kQONk6lOaTSDrN1E0PooAh
+	ZszoOaKaHcRd/xcqIJg6TFyzIjK+KUiciZ6c/+90mTBPG41MW2xKKoxUWpmq
+	B/P3rAS+DuX8o+CQy23NHTykLmV21KaXztlKo2MYgdPlgfvdqeNwxw==
+	=CYaz
+	-----END PGP PUBLIC KEY BLOCK-----
+
+
+
 
