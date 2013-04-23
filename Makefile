@@ -11,6 +11,8 @@ FTP_HOST=localhost
 FTP_USER=anonymous
 FTP_TARGET_DIR=/
 
+S3_HOST=digital-shokunin.net
+
 SSH_HOST=digital-shokunin.net
 SSH_PORT=22
 SSH_USER=surge
@@ -34,6 +36,7 @@ help:
 	@echo '   dropbox_upload                   upload the web site via Dropbox    '
 	@echo '   ftp_upload                       upload the web site via FTP        '
 	@echo '   github                           upload the web site via gh-pages   '
+	@echo '   s3_upload                        upload the web site via s3cmd      '
 	@echo '                                                                       '
 
 
@@ -50,7 +53,7 @@ regenerate: clean
 	$(PELICAN) -r $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
 
 serve:
-	cd $(OUTPUTDIR) && python -m pelican.server
+	cd $(OUTPUTDIR) && python -m SimpleHTTPServer 
 
 devserver:
 	$(BASEDIR)/develop_server.sh restart
@@ -73,5 +76,8 @@ ftp_upload: publish
 github: publish
 	ghp-import $(OUTPUTDIR)
 	git push origin gh-pages
+
+s3_upload: publish
+	s3cmd sync --acl-public --delete-removed $(OUTPUTDIR)/ s3://$(S3_HOST)       
 
 .PHONY: html help clean regenerate serve devserver publish ssh_upload rsync_upload dropbox_upload ftp_upload github
