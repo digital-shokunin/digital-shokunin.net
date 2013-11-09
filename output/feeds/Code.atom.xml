@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Digital Shokunin</title><link href="http://digital-shokunin.net/" rel="alternate"></link><link href="http://digital-shokunin.net/feeds/Code.atom.xml" rel="self"></link><id>http://digital-shokunin.net/</id><updated>2013-10-12T21:00:00-04:00</updated><entry><title>Python for fun and profit</title><link href="http://digital-shokunin.net/python-fun-profit.html" rel="alternate"></link><updated>2013-10-12T21:00:00-04:00</updated><author><name>David Mitchell</name></author><id>tag:digital-shokunin.net,2013-10-12:python-fun-profit.html</id><summary type="html">&lt;p&gt;I have been honing my Python skills on a couple of projects recently. One
+is the famous (or infamous) &lt;a href="http://www.pythonchallenge.com"&gt;Python Challenge&lt;/a&gt;
+which has been interesting, but its not where I have spent the bulk of my
+time. The other is some work related scripting in jython for Websphere 
+automating some tasks for developers (pausing and resuming activation
+specifications) in their test environment.&lt;/p&gt;
+&lt;p&gt;But was has challenged me the most and captured the majority of my attention
+is the &lt;a href="http://www.matasano.com/articles/crypto-challenges/"&gt;Matasano Crypto Challenge&lt;/a&gt;.
+The nature of the challenge is they send you several tasks to complete 
+successfully using the language of choice (in my case obviously, Python)
+and in the process you learn about encryption. More to the point you learn
+several basic weaknesses and common attacks used to crack encryption.&lt;/p&gt;
+&lt;p&gt;I've gotten through 5 of the 8 batch of exercises they've sent me, currently
+a bit stuck on number 6. It's a situation where I can kind of see what I
+am doing wrong but not sure how to fix it. Unfortunately, I am unable to 
+talk about or share the exercises with anyone, otherwise, it would not be 
+be much of a challenge.&lt;/p&gt;
+&lt;p&gt;I've also been going to the &lt;a href="http://www.pyptug.org"&gt;PyPTUG&lt;/a&gt; project nights
+and I've been getting a lot out of those. I like the open format where 
+people just share what they're working on or whatever they want to discuss.&lt;/p&gt;</summary><category term="python"></category><category term="crypto"></category></entry><entry><title>Java EE and Android</title><link href="http://digital-shokunin.net/javaee-n-Android.html" rel="alternate"></link><updated>2013-02-23T21:00:00-05:00</updated><author><name>David Mitchell</name></author><id>tag:digital-shokunin.net,2013-02-23:javaee-n-Android.html</id><summary type="html">&lt;p&gt;In the last year I've been picking up more and more Java, I did this for two reasons.&lt;/p&gt;
+&lt;p&gt;The most personal one is that I wanted to learn how to write Android programs. First, because I own an Android phone, second, the mobile platform is a platform where a small individual developer can write useful apps and there obviously is demand and a future for such skills on the 
+market as well.&lt;/p&gt;
+&lt;p&gt;I bought Android books, but later discovered that you don't need books to learn Android, and by the time you dive into them Google is releasing a new version of the SDK that makes the book nearly obsolete. There are much better resources online that cover
+the basics of writing Android programs and stay up to date. &lt;a href="https://developer.android.com/training/index.html"&gt;Google's Android Developer Training&lt;/a&gt; is an excellent place to start. &lt;/p&gt;
+&lt;p&gt;The second reason I learned Java is more professional in nature. My daily work involves maintaining JavaEE applications and it behooves me to understand something about the way they run. It's much easier to grasp things on a more tangible level and troubleshoot problems if you know something about JavaEE programming how applications work internally, how they access resources, and what logic goes into making the applications do what it is they do. I bought some books for this, mainly JavaEE changes very little or is not as fast paced as it is made for enterprise environments. So the information in the books don't deprecate nearly as quickly. I also to a self-paced online course that required some programming exercises. Most of this was specific to IBM Websphere, but very little of it is anything more then an IBM implementation of a pre-existing JavaEE standard. This has resulted in the opportunity to do some coding work on an actual application. Something I'm already seeing the fruits of. &lt;/p&gt;
+&lt;p&gt;Who knows one or both of these two may hold future careers for me if I ever decide to get out of the system administration game. I couldn't tell you which, and while there are other languages out there that hold my interest and are in many ways more fun, truth is Java is very marketable in the business environment. I see more of both JavaEE and mobile development opportunites in my own workplace as well as in the IT market at large.&lt;/p&gt;</summary><category term="Java"></category><category term="Android"></category></entry><entry><title>PyDev and wsadmin unite</title><link href="http://digital-shokunin.net/pydev-wsadmin-unite.html" rel="alternate"></link><updated>2013-02-23T21:00:00-05:00</updated><author><name>David Mitchell</name></author><id>tag:digital-shokunin.net,2013-02-23:pydev-wsadmin-unite.html</id><summary type="html">&lt;p&gt;Those of us that use WebSphere Application Server in our environments as our J2EE application server have a very
+powerful tool to administrate or automate tasks from the command line, wsadmin. wsadmin is a command line utility that
+allows you to issue commands in a single server or network deployment (multiple servers in a single administrative domain
+or "cell"). If you are reading this you probably know all about it and its support for Python, or Jython environment as
+a language to issue commands and run scripts to handle a variety of tasks.&lt;/p&gt;
+&lt;p&gt;Most of us who write scripts for it, write our scripts in a text editor and then manually execute them or test small 
+portions of our script in a separate command line window. This can be tedious at best, those of us that use an IDE
+have the issue that the standard Python interpreter doesn't respect the Websphere modules and it shows errors for 
+portions of code that are perfectly valid inside wsadmin.&lt;/p&gt;
+&lt;p&gt;So when I found &lt;a href="http://www.ibm.com/developerworks/websphere/techjournal/1209_vansickel/1209_vansickel.html"&gt;instructions&lt;/a&gt;
+on how to integrate the &lt;a href="http://pydev.org/"&gt;PyDev IDE add-on/module for Eclipse&lt;/a&gt; and 
+wsadmin, I was a little more then excited. This can save me a lot of time writing new code. &lt;/p&gt;
+&lt;p&gt;The &lt;a href="http://www.ibm.com/developerworks/websphere/techjournal/1209_vansickel/1209_vansickel.html"&gt;steps&lt;/a&gt; are fairly 
+straight forward, install Eclipse and PyDev if you haven't already done so, and download &lt;a href="http://www.jython.org/"&gt;Jython&lt;/a&gt;.
+You then configure PyDev to use the Jython jar as your Python interpreter. They provide a script that customizes the 
+Jython environment to use wsadmin. However, I found that in one of the fields, you provide a directory for it to put the 
+pre-defined Admin modules, you need to escape any slashes between directory names or the path gets mucked up.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nx"&gt;wsadmin.bat&lt;/span&gt;&lt;span class="p"&gt;/&lt;/span&gt;&lt;span class="nx"&gt;sh&lt;/span&gt; &lt;span class="na"&gt;-host&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;DM_HOST&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="na"&gt;-port&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;SOAP_PORT&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; 
+&lt;span class="na"&gt;-profile&lt;/span&gt; &lt;span class="nx"&gt;WSAdminProfile.py&lt;/span&gt;
+&lt;span class="na"&gt;-f&lt;/span&gt; &lt;span class="nx"&gt;GeneratePyPredefs.py&lt;/span&gt; 
+&lt;span class="na"&gt;-pypredefsDir&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;C:&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s2"&gt;workspaces&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s2"&gt;adminobj&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Otherwise, the setup is pretty straight forward, if you want to try it yourself, the full instructions along with the 
+necessary scripts are &lt;a href="http://www.ibm.com/developerworks/websphere/techjournal/1209_vansickel/1209_vansickel.html"&gt;here&lt;/a&gt;.&lt;/p&gt;</summary><category term="python"></category><category term="pydev"></category><category term="websphere"></category></entry><entry><title>My first post using Pelican</title><link href="http://digital-shokunin.net/first-post-pelican.html" rel="alternate"></link><updated>2013-02-10T21:00:00-05:00</updated><author><name>David Mitchell</name></author><id>tag:digital-shokunin.net,2013-02-10:first-post-pelican.html</id><summary type="html">&lt;p&gt;This is my first post using Pelican as my new blogging platform. I had considered using &lt;a href="http://www.octopress.org"&gt;OctoPress&lt;/a&gt; but encountered too much trouble getting the ruby stack to work properly without dependency problems, even following directions or tutorials. So I looked for a Python alternative and found &lt;a href="http://docs.notmyidea.org/alexis/pelican/"&gt;Pelican&lt;/a&gt;. I found it was much simpler to get running just following the directions. Plus, I know Python, so I'm obviously more comfortable with it then Ruby. I've never dealt with Ruby directly until OctoPress and my prior experience only included reading about it.&lt;/p&gt;
+&lt;p&gt;I am using AWS to host this, and an AWS EC2 host or S3 bucket is securely configured to only allow login through ssh with a private key file. This makes it difficult to simply publish over ssh with the default authentication. Some changes need to be made to the site Makefile to allow for this.&lt;/p&gt;
+&lt;p&gt;On line 18:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nv"&gt;SSH_PRI_KEY&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&amp;lt;path to private key file&amp;gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Further down on line 60:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nf"&gt;ssh_upload&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="m"&gt;publish&lt;/span&gt;
+&lt;span class="nf"&gt;scp -i $(SSH_PRI_KEY) -P $(SSH_PORT) -r $(OUTPUTDIR)/* $(SSH_USER)@$(SSH_HOST)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="m"&gt;$(SSH_TARGET_DIR)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;From there a simple &lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="n"&gt;make&lt;/span&gt; &lt;span class="n"&gt;ssh_upload&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;will push it out to my AWS host.&lt;/p&gt;
+&lt;p&gt;For some reason, this type of blogging platform seems more elegant then a CMS like WordPress, it gives you the control you get from statically coding your site's html/css/js, to say nothing of the lack of overhead required to serve static content. However, it still gives you the dynamically generated links and ease of management one gets from a CMS. That and it's very programmer friendly.&lt;/p&gt;
+&lt;p&gt;I need some time to go through all the &lt;a href="https://github.com/getpelican/pelican-themes"&gt;themes&lt;/a&gt; for Pelican but so far I like the simple look of the default template. I may either tweak it or try out some of the other themes.&lt;/p&gt;
+&lt;p&gt;I also have some other things to work on or learn about for this site, like getting used to using markdown, adding some more content, and testing the limitations of Pelican.&lt;/p&gt;</summary><category term="python"></category><category term="pelican"></category></entry></feed>

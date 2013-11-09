@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Digital Shokunin</title><link href="http://digital-shokunin.net/" rel="alternate"></link><link href="http://digital-shokunin.net/feeds/SysAdmin/DevOps.atom.xml" rel="self"></link><id>http://digital-shokunin.net/</id><updated>2013-11-07T21:00:00-05:00</updated><entry><title>Reverse XOR'ing WebSphere Passwords</title><link href="http://digital-shokunin.net/websphere-xor-password.html" rel="alternate"></link><updated>2013-11-07T21:00:00-05:00</updated><author><name>David Mitchell</name></author><id>tag:digital-shokunin.net,2013-11-07:websphere-xor-password.html</id><summary type="html">&lt;p&gt;Some of the lessons I've learned from the &lt;a href="http://www.matasano.com/articles/crypto-challenges/"&gt;Matasano Crypto Challenge&lt;/a&gt;
+has already had unexpected practical application for a common issue I 
+encounter at work. Sometimes, people forget things, don't document things
+especially in dev environments (hopefully not so much in production), one
+of those things is passwords, passwords for database accounts, or for an
+account that has some authorization the application needs. If a dev forgets
+a password or can't find where it was documented, it's many times better
+to just recover the password, rather then reset the password, especially
+if the account is used by the application in local dev environments, etc.&lt;/p&gt;
+&lt;p&gt;There are also sites that will reverse it for you, but why use a website 
+when you can use a jython/python script. You can also  use the 
+com.ibm.ws.security.util.PasswordDecoder method from within wsadmin to 
+accomplish the same task as well. The one thing I haven't found is a 
+Python script example on how to do this, so I decided to write my own 
+simple script module that can decode (or encode) a password that can 
+execute in jython (wsadmin) or plain Python. &lt;/p&gt;
+&lt;p&gt;WebSphere stores most of the account information used by applications to 
+connect to resources as authentication aliases. The authentication aliases 
+are stored by WebSphere in the security.xml file for the cell in a network
+deployment setup, of which the password is stored as an xor string.&lt;/p&gt;
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="n"&gt;xor&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="n"&gt;Lz4sLCgwLTs&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Now, xor'ing passwords is not a very strong hash method for securing a 
+password, as we'll soon explore, wspecially when xor'ing 
+against a single character, which is what WebSphere does. This exacerbates
+the need for good file system security on your websphere installation so 
+that not just anyone can view your security.xml file. I could have 
+tried xor'ing against various single characters to crack it in seconds, 
+but there are already multiple other articles and posts out there on how 
+to reverse xor the WebSphere, checking a couple of results from Google
+you learn passwords are xor'ed against the underscore '_' character. &lt;/p&gt;
+&lt;p&gt;First, the password hash is base64 encoded, so you have to decode it using
+the binascii module (base64 library wasn't supported in wsadmin). Well, 
+first is actually removing the {xor} prefix, but that's a minor detail.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt; &lt;span class="n"&gt;xor_str&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;{xor}Lz4sLCgwLTs=&amp;quot;&lt;/span&gt;
+ &lt;span class="n"&gt;xor_str&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;xor_str&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;replace&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="n"&gt;xor&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+ &lt;span class="n"&gt;value1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;binascii&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;a2b_base64&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;xor_str&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Then you create another string of underscores that is the same length as
+the string resulting from the base64 decode.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt; &lt;span class="n"&gt;value2&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="sc"&gt;&amp;#39;_&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;value1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Now you have two strings of equal length, one being underscores, now you 
+just xorsum the two strings. The easiest way I've found is to just do it 
+character by character rather then whole strings at a time.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt; &lt;span class="n"&gt;password&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&amp;#39;&lt;/span&gt;
+ &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;zip&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;value1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;value2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+     &lt;span class="n"&gt;password&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;join&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="n"&gt;password&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;chr&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ord&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;^&lt;/span&gt; &lt;span class="n"&gt;ord&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;))])&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Now your password variable will contain the decoded password. Very 
+simple.&lt;/p&gt;
+&lt;p&gt;If you need something like this or want to see how I pull it all together,
+I've got the full code anyone can use/implement, also with the encode 
+functions in a &lt;a href="https://github.com/digital-shokunin/was_xor_decode"&gt;Github repo&lt;/a&gt;.&lt;/p&gt;</summary><category term="ibm"></category><category term="websphere"></category><category term="crypto"></category><category term="python"></category><category term="security"></category></entry><entry><title>Message engines &amp; Service Integration Buses</title><link href="http://digital-shokunin.net/message-engine-bus.html" rel="alternate"></link><updated>2013-05-30T21:00:00-04:00</updated><author><name>David Mitchell</name></author><id>tag:digital-shokunin.net,2013-05-30:message-engine-bus.html</id><summary type="html">&lt;p&gt;One of the components that I deal with in my work with WebSphere that seems nebulous to some conceptually, is the service integration bus and it's corresponding message engine. Especially when you're first beginning to learn about WebSphere and JMS. This concept is not unique to WebSphere and similar implementations can be found in JBoss, but my experience with it rests mostly with WebSphere.&lt;/p&gt;
+&lt;p&gt;A service integration bus lets applications exchange messages between each other within a cell. Think of it like a transport provider for messages within WebSphere that allows for asynchronous communication between applications. One application can place a message on a bus, and all other applications connected to the bus can retrieve the message and perform some work on them, or there is some mediation done before hand. You can have one application handle a web request and put a message on a bus where a cluster of applications that can handle the request will see it and one of them will grab the message and handle the work needed for the request. This is very useful for spreading the workload among a cluster of application servers while ensuring high availability.&lt;/p&gt;
+&lt;p&gt;The bus has what are called destinations, which are effectively queues or topics similar in concept to what you would find with WebSphere MQ. Destinations are simply where the messages are put and retrieved. There is usually a message producer and consumer. One being the application that creates and places the message on the destination, and the consumer the application that receives the message.&lt;/p&gt;
+&lt;p&gt;The component that performs all the work is the message engine, it can be an application server or cluster of servers that are members of the bus. They also host the destinations on the bus. There are &lt;a href="http://www.ibm.com/developerworks/websphere/library/techarticles/0704_chilanti/0704_chilanti.html#N100E3"&gt;ways of configuring the message engine across the members so that there is redundancy and fail-over&lt;/a&gt;. Each of which has advantages and disadvantages which should be weighed for what best suits your environment.&lt;/p&gt;
+&lt;p&gt;The message engine itself needs somewhere to store the messages, simply keeping them in memory can mean losing messages. The two main options available are either a file store, meaning they are just written directly to disk, or a JDBC data source meaning the messages are placed and stored in database, like DB2 or Oracle. &lt;/p&gt;
+&lt;p&gt;Usually the messages are stored on the bus indefinitely until they are retrieved by a consumer. In fact, one problem I've encountered is old messages that no longer have an active transaction associated with them remaining on the destination until they are cleared, this can cause problems with when the message engine is restarted since it processes all the messages on the queue before getting to ones that are associated with a transaction. If there are a lot of messages, this can take a very long time. You need to usually set an expiration for the message either in the &lt;a href="http://pic.dhe.ibm.com/infocenter/wasinfo/v7r0/index.jsp?topic=%2Fcom.ibm.websphere.nd.doc%2Finfo%2Fae%2Fae%2Frwsf_prjms_timetolive.html"&gt;JMS properties in the application code&lt;/a&gt; that produces the message or setting a property value on the &lt;a href="http://pic.dhe.ibm.com/infocenter/wasinfo/v7r0/index.jsp?topic=%2Fcom.ibm.websphere.nd.multiplatform.doc%2Finfo%2Fae%2Fae%2FSIBJMSQueue_DetailForm.html"&gt;destination queue itself&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;It should also be noted that those with a WebSphere MQ infrastructure in place may &lt;a href="http://www.ibm.com/developerworks/websphere/library/techarticles/1109_wallis/1109_wallis.html"&gt;choose to use MQ instead of an SIBus&lt;/a&gt; to exchange messages between applications. One can even &lt;a href="http://pic.dhe.ibm.com/infocenter/wasinfo/v7r0/index.jsp?topic=%2Fcom.ibm.websphere.soafep.multiplatform.doc%2Finfo%2Fae%2Fae%2Fcjc0051_.html"&gt;exchange messages between MQ and the SI Bus&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;While the concepts may seem daunting and configuring an SI Bus can be complex, its simple to just remember that its ultimate purpose is just to allow one or more applications to exchange messages using the JMS API.&lt;/p&gt;</summary><category term="ibm"></category><category term="websphere"></category></entry></feed>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>Fierce</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="./theme/css/main.css" type="text/css" />
+   
+
+        <!--[if IE]>
+                <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+        <!--[if lte IE 7]>
+                <link rel="stylesheet" type="text/css" media="all" href="./css/ie.css"/>
+                <script src="./js/IE8.js" type="text/javascript"></script><![endif]-->
+
+        <!--[if lt IE 7]>
+                <link rel="stylesheet" type="text/css" media="all" href="./css/ie6.css"/><![endif]-->
+
+</head>
+
+<body id="index" class="home">
+<a href="http://github.com/digital-shokunin/">
+<img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub" />
+</a>
+        <header id="banner" class="body">
+                <h1><a href=".">Digital Shokunin </a></h1>
+                <nav><ul>
+                                    <li><a href="http://digital-shokunin.net">Home</a></li>
+                                                                    <li><a href="./pages/david-mitchell.html">About</a></li>
+                                                                    <li ><a href="./category/code.html">Code</a></li>
+                                    <li class="active"><a href="./category/hacking.html">Hacking</a></li>
+                                    <li ><a href="./category/sysadmindevops.html">SysAdmin/DevOps</a></li>
+                                </ul></nav>
+        </header><!-- /#banner -->
+        <section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="fierce.html" rel="bookmark"
+           title="Permalink to Fierce">Fierce</a></h1>
+      <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="surgeterrix">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+    </header>
+
+    <div class="entry-content">
+      <footer class="post-info">
+        <abbr class="published" title="2013-04-11T21:00:00">
+                Thu 11 April 2013
+        </abbr>
+
+                <address class="vcard author">
+                By <a class="url fn" href="./author/david-mitchell.html">David Mitchell</a>
+        </address>
+        <p>In <a href="./category/hacking.html">Hacking</a>. </p>
+<p>tags: <a href="./tag/security.html">Security</a><a href="./tag/pen-testing.html">Pen Testing</a><a href="./tag/dns.html">DNS</a></p></footer><!-- /.post-info -->      <p>I've been learning a little bit about security and penetration testing in my spare time. I have some friends who are professionals in the industry and I have an interest in it myself so when they mention a tool I like to take a look at what it does and learn a little bit about it.</p>
+<p><a href="http://ha.ckers.org/fierce/">Fierce</a> is a domain scanning tool, what that means is it scans an organization's domains for listed hosts. For example, a target company may have several non-contigious IP ranges or have branch sites or locations that aren't using the same public IP's as say their website or main office. By scanning their DNS records you might discover some hosts on IP's that weren't in the same scope as say their website or primary data center, and thus may be hosts that aren't as vigilantly maintained. An organization's IT department might have hosts or backdoors to access a branch location they setup for themselves that they setup a domain name for (ex:branch32-jumphost.company.com) that isn't apparent by scanning a single IP address range.</p>
+<p>By scanning the company's DNS records, you can easily discover the lesser known vectors of attack in theory. Also, it's not as likely to trigger an intrusion detection system like one would if you port scanned an entire company's IP range looking for available hosts.</p>
+<p>Fierce is a really simple tool to use, anyone who has used a tool like 
+nmap will find it straight forward. Installation is simply done by checking out their subversion repository.</p>
+<div class="codehilite"><pre><span class="n">svn</span> <span class="n">co</span> <span class="n">https</span><span class="o">:</span><span class="c1">//svn.assembla.com/svn/fierce/fierce2/trunk/ fierce2/</span>
+</pre></div>
+
+
+<p>It's written in Perl, so you should already have that installed on whatever you'll be running it on. From there it's as simple as going into the newly created fierce2 directory and running a scan against your target.</p>
+<div class="codehilite"><pre><span class="n">fierce</span> <span class="o">-</span><span class="n">dns</span> <span class="n">company</span><span class="p">.</span><span class="n">com</span>
+</pre></div>
+
+
+<p>There are more <a href="https://trac.assembla.com/fierce/wiki">examples on the wiki</a></p>
+<p>Now, that I've said all that, while querying someone's DNS records is in and of itself harmless, exercise some common sense. Don't be scanning networks or domains you don't yourself own or have permission to be messing with. At the very least, don't do it exposed from your home IP as you can get yourself in trouble, reported to your ISP, or even in trouble with local law enforcement even if you're just being curious and not going any further then seeing what's out there, it still might be enough to get you in hot water depending on your local laws and ISP's policies. </p>
+<p>However, you might want to know just how much your own domain records give away, and if you administrate your own DNS, you might want to adjust some settings on your DNS servers to prevent too much from being exposed to would-be attackers. After all, why give away more information to the outside world then you absolutely have to. For those cases, this tool is worth having available even if you're not a dediated security professional yourself.</p>
+    </div><!-- /.entry-content -->
+        <div class="comments">
+      <h2>Comments !</h2>
+      <div id="disqus_thread"></div>
+      <script type="text/javascript">
+        var disqus_identifier = "fierce.html";
+        (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://digitalshokunin.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
+    </div>
+    
+  </article>
+</section>
+        <section id="extras" class="body">
+                                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+                            
+                                                    <li><a href="https://plus.google.com/u/0/112141969866873644503/">google+</a></li>
+                                                    <li><a href="http://github.com/digital-shokunin">github</a></li>
+                                                    <li><a href="http://twitter.com/surgeterrix">twitter</a></li>
+                                                    <li><a href="http://www.linkedin.com/profile/view?id=51799602">linkedin</a></li>
+                                                    <li><a href="http://lastfm.com/user/surgeterrix">lastfm</a></li>
+                                                    <li><a href="mailto:david.mitchell@digital-shokunin.net">email</a></li>
+                                                </ul>
+                </div><!-- /.social -->
+                </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+
+        </footer><!-- /#contentinfo -->
+
+    <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+    try {
+        var pageTracker = _gat._getTracker("UA-37662566-1");
+    pageTracker._trackPageview();
+    } catch(err) {}</script>
+<script type="text/javascript">
+    var disqus_shortname = 'digitalshokunin';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+</body>
+</html>
