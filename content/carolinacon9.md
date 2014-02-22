@@ -1,7 +1,7 @@
 Title: CarolinaCon 9
 Date: 2013-03-17 22:00
 Tags: security, hacking, lockpicking
-Category: Hacking
+Category: InfoSec
 Slug: carolinacon-9
 Author: David Mitchell
 Summary: Talks I attended at CarolinaCon 9 and FALE lock picking village

@@ -1,7 +1,7 @@
 Title: Fierce
 Date: 2013-04-11 21:00
 Tags: Security, Pen Testing, DNS
-Category: Hacking
+Category: InfoSec
 Slug: fierce
 Author: David Mitchell
 Summary: Using fierce to map an organization's external online assets.

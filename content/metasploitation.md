@@ -1,7 +1,7 @@
 Title: Metasploitation
 Date: 2013-08-05 21:00
 Tags: metasploit, security
-Category: Hacking
+Category: InfoSec
 Slug: metasploitation
 Author: David Mitchell
 Summary: Metasploit the safe and easy way
