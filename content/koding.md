@@ -25,4 +25,4 @@ person writing the O'Reilly Flask book.
 
 [flask]: http://flask.pocoo.org/
 [flask-tutorial]: http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world
-[koding]: http://koding.com
+[koding]: https://koding.com/R/digital-shokunin

@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Digital Shokunin</title><link href="http://digital-shokunin.net/" rel="alternate"></link><link href="http://digital-shokunin.net/feeds/SysAdmin/DevOps.atom.xml" rel="self"></link><id>http://digital-shokunin.net/</id><updated>2013-11-07T21:00:00-05:00</updated><entry><title>Reverse XOR'ing WebSphere Passwords</title><link href="http://digital-shokunin.net/websphere-xor-password.html" rel="alternate"></link><updated>2013-11-07T21:00:00-05:00</updated><author><name>David Mitchell</name></author><id>tag:digital-shokunin.net,2013-11-07:websphere-xor-password.html</id><summary type="html">&lt;p&gt;Some of the lessons I've learned from the &lt;a href="http://www.matasano.com/articles/crypto-challenges/"&gt;Matasano Crypto Challenge&lt;/a&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Digital Shokunin</title><link href="http://digital-shokunin.net/" rel="alternate"></link><link href="http://digital-shokunin.net/feeds/SysAdmin/DevOps.atom.xml" rel="self"></link><id>http://digital-shokunin.net/</id><updated>2014-02-20T21:00:00-05:00</updated><entry><title>Intel Graphics Issues with Ubuntu 12.04</title><link href="http://digital-shokunin.net/intel-issue.html" rel="alternate"></link><updated>2014-02-20T21:00:00-05:00</updated><author><name>David Mitchell</name></author><id>tag:digital-shokunin.net,2014-02-20:intel-issue.html</id><summary type="html">&lt;p&gt;I have an &lt;a href="http://www.dell.com/us/business/p/xps-13-linux/pd"&gt;XPS 13 Developer edition laptop (aka Project Sputnick)&lt;/a&gt;, after 
+some updates to Ubuntu in recent months, it would randomly freeze. It became apparent it 
+was the graphics card that was freezing as processes were still running 
+even though the display image was frozen and the mouse nor any other input
+seemed to have no affect (if I left it on downloads would finish). 
+This was very frustrating as I had bought an officially supported set of 
+hardware for Ubuntu from Dell to eliminate these kind of hardware support 
+headaches. Turns out the issue is a &lt;a href="http://www.howtoeverything.net/linux/hardware/random-freezes-integrated-hd-4000-graphics"&gt;known issue&lt;/a&gt; with Intel 4400 
+graphics chipset and the old kernel. The solution was simple, 
+get a more recent kernel, which means updating from the LTS 12.04 release 
+of Ubuntu to a newer version. Since doing the update I've had only one freeze 
+in almost a month.&lt;/p&gt;
+&lt;p&gt;I will say I am a bit disappointed with Dell and Ubuntu for letting this
+issue continue. This is nearly unexcusable and the LTS version should be
+the most stable and well supported, especially since it is what it comes with. 
+This has made me lose work, and is a massive problem with an otherwise high 
+quality set of hardware. Such a hard lock issue on a platform known for stability
+on a widely available chipset should receive top priority and the fix should
+have been back ported to the kernel used by 12.04 by the Ubuntu dev team.&lt;/p&gt;</summary><category term="hardware"></category><category term="ubuntu"></category><category term="linux"></category></entry><entry><title>Reverse XOR'ing WebSphere Passwords</title><link href="http://digital-shokunin.net/websphere-xor-password.html" rel="alternate"></link><updated>2013-11-07T21:00:00-05:00</updated><author><name>David Mitchell</name></author><id>tag:digital-shokunin.net,2013-11-07:websphere-xor-password.html</id><summary type="html">&lt;p&gt;Some of the lessons I've learned from the &lt;a href="http://www.matasano.com/articles/crypto-challenges/"&gt;Matasano Crypto Challenge&lt;/a&gt;
 has already had unexpected practical application for a common issue I 
 encounter at work. Sometimes, people forget things, don't document things
 especially in dev environments (hopefully not so much in production), one

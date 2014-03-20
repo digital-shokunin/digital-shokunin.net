@@ -1,5 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Digital Shokunin</title><link href="http://digital-shokunin.net/" rel="alternate"></link><link href="http://digital-shokunin.net/feeds/Code.atom.xml" rel="self"></link><id>http://digital-shokunin.net/</id><updated>2013-10-12T21:00:00-04:00</updated><entry><title>Python for fun and profit</title><link href="http://digital-shokunin.net/python-fun-profit.html" rel="alternate"></link><updated>2013-10-12T21:00:00-04:00</updated><author><name>David Mitchell</name></author><id>tag:digital-shokunin.net,2013-10-12:python-fun-profit.html</id><summary type="html">&lt;p&gt;I have been honing my Python skills on a couple of projects recently. One
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Digital Shokunin</title><link href="http://digital-shokunin.net/" rel="alternate"></link><link href="http://digital-shokunin.net/feeds/Code.atom.xml" rel="self"></link><id>http://digital-shokunin.net/</id><updated>2014-01-25T21:00:00-05:00</updated><entry><title>Koding with Flask</title><link href="http://digital-shokunin.net/koding.html" rel="alternate"></link><updated>2014-01-25T21:00:00-05:00</updated><author><name>David Mitchell</name></author><id>tag:digital-shokunin.net,2014-01-25:koding.html</id><summary type="html">&lt;p&gt;&lt;a href="http://koding.com"&gt;Koding&lt;/a&gt; is a cool site that provides a web-based development environment
+that is perfect for budding programers and veteran programmers who want an
+easy to use sandbox environment to develop in. For free you get a VM that
+that comes pre-setup so that you can develop in several languages including 
+Python, plus database backends ability to install more resources (you get
+full root access to your VM).&lt;/p&gt;
+&lt;p&gt;A lot of coders use it to stage or live demo a project, and of course the 
+VM automatically shutsdown when you log off. You can expand the VM's but
+that's the point you start paying, or once your project needs some real 
+resources, or you want to bring on additional team members, etc. &lt;/p&gt;
+&lt;p&gt;Myself, I've been using it as a convenient place to experiment with writing
+Python web applications using uWSGI and the &lt;a href="http://flask.pocoo.org/"&gt;Flask framework&lt;/a&gt;. I found a 
+&lt;a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world"&gt;tutorial Flask&lt;/a&gt;, which is apparently done by the same 
+person writing the O'Reilly Flask book.&lt;/p&gt;</summary><category term="python"></category><category term="koding"></category><category term="flask"></category></entry><entry><title>Oscar scanner</title><link href="http://digital-shokunin.net/grocery-scanner.html" rel="alternate"></link><updated>2014-01-05T21:00:00-05:00</updated><author><name>David Mitchell</name></author><id>tag:digital-shokunin.net,2014-01-05:grocery-scanner.html</id><summary type="html">&lt;p&gt;&lt;a href="https://github.com/danslimmon/oscar"&gt;Oscar&lt;/a&gt; is a Python project utilizing the Raspberry Pi w/ UPC barcode reader 
+to scan barcodes on items you keep stocked in your pantry or fridge, when 
+scanned, ideally when you run out of an item just before throwing the packaging
+or container away, it will populate your grocery list with the item reminding 
+you that you need to pick up more of that item on your next shopping trip. 
+Since it's written in Python, it could easily be adapted to run on almost 
+any device with Linux on it and a USB port that is networked. I've been 
+working on a &lt;a href="https://github.com/digital-shokunin/oscar/tree/python3"&gt;fork of it&lt;/a&gt; for Python3/Arch and using the 
+&lt;a href="https://www.adafruit.com/products/1203"&gt;miniature UPC reader from Adafruit&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;My work on the &lt;a href="http://digital-shokunin.net/indicator-project.html"&gt;GTK indicator&lt;/a&gt; has kind of stalled, I've 
+lost interest but I might pick it up later if I'm ever motivated to work 
+out the kinks in it.&lt;/p&gt;</summary><category term="python"></category></entry><entry><title>Python indicator applet</title><link href="http://digital-shokunin.net/indicator-project.html" rel="alternate"></link><updated>2013-12-14T21:00:00-05:00</updated><author><name>David Mitchell</name></author><id>tag:digital-shokunin.net,2013-12-14:indicator-project.html</id><summary type="html">&lt;p&gt;In my attempt to code more, I've been looking for a purpose or a problem 
+to which I can apply what I've learned or use as a reason to acquire new
+knowledge. One of the things I've been working on a clone of a Mac OS X 
+application an &lt;a href="https://github.com/MohawkApps/Hacker-Bar"&gt;acquaintance of mine is writing&lt;/a&gt;.
+This has begun my foray into writing using the &lt;a href="https://python-gtk-3-tutorial.readthedocs.org/en/latest/index.html"&gt;PyGObject&lt;/a&gt;
+API for GTK along with the &lt;a href="https://unity.ubuntu.com/projects/appindicators/"&gt;Ubuntu GTK indicator API&lt;/a&gt;. 
+The PyGTK library is deprecated (GTK 3 going forward), which is what most 
+of the examples I've found online use where as there is less documentation 
+and discussion for PyGObject. In keeping with using the latest I am writing 
+it in Python 3.&lt;/p&gt;
+&lt;p&gt;I have it somewhat working, in that it will display a list of links that 
+you can click on and open a browser, but have had some trouble getting it
+to update/refresh the listing. I've also run into limitations in GTK menus
+that will not allow me to show little icons for the number of points/comments
+an article has. You can view what I have so far on the &lt;a href="https://github.com/digital-shokunin/Hacker-News-Applet"&gt;GitHub repo&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I'm also trying out Qt as an alternative to get around the GTK limitations. 
+There is a &lt;a href="https://github.com/digital-shokunin/Hacker-News-Applet/tree/qt"&gt;Qt branch&lt;/a&gt; for that. Still, I have some 
+separate issues like getting the links to open. If I can get those squared 
+away and make the menu refresh and draw icons, I will abandon the GTK API 
+entirely and merge the Qt version/branch into the main branch.&lt;/p&gt;</summary><category term="python"></category><category term="qt"></category><category term="gtk"></category></entry><entry><title>Python for fun and profit</title><link href="http://digital-shokunin.net/python-fun-profit.html" rel="alternate"></link><updated>2013-10-12T21:00:00-04:00</updated><author><name>David Mitchell</name></author><id>tag:digital-shokunin.net,2013-10-12:python-fun-profit.html</id><summary type="html">&lt;p&gt;I have been honing my Python skills on a couple of projects recently. One
 is the famous (or infamous) &lt;a href="http://www.pythonchallenge.com"&gt;Python Challenge&lt;/a&gt;
 which has been interesting, but its not where I have spent the bulk of my
 time. The other is some work related scripting in jython for Websphere 
