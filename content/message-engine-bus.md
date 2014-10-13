@@ -1,7 +1,7 @@
 Title: Message engines & Service Integration Buses
 Date: 2013-05-30 21:00
 Tags: ibm, websphere
-Category: SysAdmin/DevOps
+Category: DevOps
 Slug: message-engine-bus
 Author: David Mitchell
 Summary: Understanding the use of message engines and service integration bus in WebSphere

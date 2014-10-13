@@ -2,7 +2,7 @@ Title: Intel Graphics Issues with Ubuntu 12.04
 Date: 2014-02-20 21:00
 Tags: hardware, ubuntu, linux
 Slug: intel-issue
-Category: SysAdmin/DevOps
+Category: DevOps
 Author: David Mitchell
 Summary: Intel 4400 bug in Ubuntu 12.04 LTS
 
