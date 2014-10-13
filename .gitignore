@@ -3,6 +3,9 @@
 # C extensions
 *.so
 
+#output dir
+/output
+
 # Packages
 *.egg
 *.egg-info
@@ -34,3 +37,6 @@ nosetests.xml
 .mr.developer.cfg
 .project
 .pydevproject
+
+#Pelican
+*.pid
