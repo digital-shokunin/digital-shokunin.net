@@ -2,7 +2,7 @@ Title: Spinning Wheels
 Date: 2014-06-12 21:00
 Tags: python, docker, flask, android, vm, 
 Slug: spinning-wheels
-Category: SysAdmin/DevOps
+Category: DevOps
 Author: David Mitchell
 Summary: So many projects, so little time or motivation
 

@@ -1,7 +1,7 @@
 Title: Reverse XOR'ing WebSphere Passwords
 Date: 2013-11-7 21:00
 Tags: ibm, websphere, crypto, python, security
-Category: SysAdmin/DevOps
+Category: DevOps
 Slug: websphere-xor-password
 Author: David Mitchell
 Summary: Reversing XOR'ed passwords stored in WebSphere's security.xml
