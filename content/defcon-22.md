@@ -34,23 +34,23 @@ Vegas, thus had some time on their hands.
 <img width="600" alt="badge" src="/static/pictures/lockpicks.jpg">
 
 There were super sensitive recruiters who get really upset when you tell 
-them that you don't like them, even after they continually interrupt your 
-conversation, and report you to the staff for "rudeness". This may or may 
+them that you don't like them, when asked why your refusing their stuff 
+after they continually interrupt your conversation to offer you something, 
+and report you to the staff for "rudeness". This may or may 
 not have lead to FALE not being invited back next year, which would be 
 kind of sad because BSides started because vendor influence at other cons 
 kept certain talks from taking place. Granted this is a meager incident, 
 but it still means a vendor is dictating what's allowed and all of FALE 
 is being held accountable for someone's individual opinion. Although, I 
-concur that recruiters especially in this case can be annoying, if someone 
+concur that recruiters especially in this case can be annoying. If someone 
 doesn't want what you're offering and is trying to talk to someone, step 
-off, if you want to know their reasons and ask, at least don't get mad 
+off. If you want to know their reasons and ask, at least don't get mad 
 when you get an honest answer. What's weird is it probably wasn't even 
-close to thins we normally do that some might consider offensive, so much 
-so when someone from the BSides staff pointed his finger at us and started
-heckling us saying we should be ashamed of ourselves with zero context a
-long time after the "incident" took place (at this point most of us 
-didn't even know there was an incident), we asked him what specifically 
-is he referring to?
+close to some things we normally do that some might consider offensive. 
+So when someone from the BSides staff pointed his finger at us and started
+heckling us saying we should be ashamed of ourselves, with zero context a
+long time after the "incident" took place of which the rest of us weren't 
+aware of, we asked him what specificaly was he referring to?
 
 The rest of the week was spent at DefCon...sort of. We spent at least half
 of it at the hotel room hacking the badge do all sorts of crazy stuff like
