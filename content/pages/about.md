@@ -6,7 +6,7 @@ Author: David Mitchell
 Summary: About me and Digital Shokunin
 
 
-<img alt="Communing with squirrels" align=right style="padding:5px;" src='/static/pictures/david.jpg'>First off, I am David Mitchell, and this site of mine is focused on my coding and technical endeavors. I wanted a site that focused on my professional and enthusiast experiences with information technology, including coding, hacking, system administration, and anything else I happen to learn or find informative in this area.
+<img alt="Communing with squirrels" align=right style="padding:5px;" src='/static/pictures/david.jpg'>This site is focused on my professional and enthusiast experiences with information technology, including coding, hacking, system administration, and anything else I happen to learn or find informative in this area.
 
 Professionally, I am a system administrator. I work with Linux (and some Unixes), some Windows systems, mostly administrating middleware platforms such J2EE Application Servers and message oriented middleware (mostly the IBM WebSphere product line). I've also been working heavily with the Eucalyptus cloud platform. Along with that comes some coding and programming in Java and Python, and some other shell languages such Perl, bash, even PowerShell. I've written in other languages in the past (Pascal, COBOL, C++, even VB .NET), but rarely have the chance or desire to use them.
 
