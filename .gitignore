@@ -40,3 +40,9 @@ nosetests.xml
 
 #Pelican
 *.pid
+
+#vi
+*~
+
+#script backup
+*.sh.bck
