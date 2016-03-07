@@ -13,11 +13,11 @@ that could have prevented the mistakes covered earlier in the talk.
 
 The talk slides are [here](http://digital-shokunin.net/presentations/full-spectrum-cyber/).
 
-I referenced OpSec work and talks done by the grugq. His you can find his site
-I mentioned in the end of the talk at [grugq.github.io](https://grugq.github.io/).
-The talk I mentioned by the grugq, is called [OPSEC: Because Jail is for wuftpd](https://www.youtube.com/watch?v=9XaYdCdwiWU). My talk was initially just
-going to be funny stories of hackers getting busted for amazingly feats of stupidity
-as kind of my follow up of funny defacement pages that are out there. Then I thought about OpSec lessons interspersed, then while researching OpSec, I found the grugq had more or less done the same kind of talk but focused purely on lulzsec and how they were taken down and less humor (granted his talk is still pretty funny).
+I referenced OpSec work and talks done by the grugq. You can find his site
+I mentioned in my talk at [grugq.github.io](https://grugq.github.io/).
+The grugq's talk I also mentioned is called [OPSEC: Because Jail is for wuftpd](https://www.youtube.com/watch?v=9XaYdCdwiWU). My talk was initially just
+going to be funny stories of hackers getting busted for amazing feats of stupidity
+as kind of along the same theme as the defacement page talk I gave last year. Then I thought about OpSec lessons interspersed. Then while researching OpSec, I found the grugq had more or less done the same kind of talk but focused purely on lulzsec and how they were taken down and less humor (granted his talk is still pretty funny).
 
 Video of my talk should up soon. Just keep an eye on the [CarolinaConVideos YouTube
 channel](https://www.youtube.com/user/CarolinaConVideos) and look for talk by Randy.
