@@ -6,7 +6,7 @@ Category: InfoSec
 Author: David Mitchell
 Summary: Another CarolinaCon, another talk.
 
-I gave another talk for this years CarolinaCon 12 called "Never Go Full Spectrum
+I gave another talk for this year's CarolinaCon 12 called "Never Go Full Spectrum
 Cyber". For this talk I focused on mistakes "hackers" and even some InfoSec
 professionals have made and then a short summary at the end of OpSec lessons
 that could have prevented the mistakes covered earlier in the talk.
