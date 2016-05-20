@@ -18,17 +18,21 @@ Note: a short explaination of the term "digital shokunin", or more to the point,
 and get better at what I do, whether it be programming, operations, dabbling in infosec, etc.
 
 	::PGP Public Key
-        -----BEGIN PGP PUBLIC KEY BLOCK-----
-	Version: OpenPGP.js v.1.20130228
-	Comment: http://openpgpjs.org
+	-----BEGIN PGP PUBLIC KEY BLOCK-----
+	Version: GnuPG v1
 
-	xo0EUU+eJQEEAIEv25OGLs/g9IlkN26FzIiJldDHXOvBCEJmEA70ZkPmoGwi
-	6frf8lwQe64WpjmOy/UuN9vKj++3+KCW0WT4DHcT8I4BWU6PDsY+PiU20b4e
-	+B8TdenAL5PI50KMudb51qhMu+IWLKmzfSilOLpXNzg+mzI3WTIuSrv1tF0a
-	YC69ABEBAAHNNERhdmlkIE1pdGNoZWxsIDxkYXZpZC5taXRjaGVsbEBkaWdp
-	dGFsLXNob2t1bmluLm5ldD7CnAQQAQIAEAUCUU+eJgkQRbhEogPDEzsAAB2E
-	A/9PHV5ViBCGPy7ehdNgi0g9cZwdIrKH3oT6F3kQONk6lOaTSDrN1E0PooAh
-	ZszoOaKaHcRd/xcqIJg6TFyzIjK+KUiciZ6c/+90mTBPG41MW2xKKoxUWpmq
-	B/P3rAS+DuX8o+CQy23NHTykLmV21KaXztlKo2MYgdPlgfvdqeNwxw==
-	=CYaz
+	mQENBFKf1DcBB/9IDM4sMzdiE5zX2kPqMcjvviCpdBDH1OxGx3T+4HoP1Z3UHuE5
+	bdYZupqtD+9GY3NqNhAe2eCe5PQdauDNPqWndzZ92PEE4ARsoRfVsmYAed8xXHiq
+	oFdrB+BADbX0lUXaBtFuY6j4kDwwqkcOt012INK/Hm0pT12Tu2vDx+9ac/cI9jkf
+	6SdTBhpiY/IbmptZb+emalyDeIUW/lY1BolalXr4H5VCcdMOGtTgrLs1aF7OEK35
+	cfUoz8VEUVtu0wh3lq8ABm3G1TE56NAJzX2DAfpqJcvzN1DGWBu4P1grGX8dgEFk
+	ClMy7+O5Z4XgtbcSm1eLbv2GfqFKDPp5T13JABEBAAG0FnlvbW9tbWFzdGV2ZUBn
+	bWFpbC5jb22JARwEEAECABAFAlKf1EAJEJtXNyuU0KiDAAApNAf+IWw+I5Rr28G2
+	bHRzSCYrTrMvNA/peZqtQ6jbLg+PRBN470mvyB/NiFEm3gCR+VYAYAMHWD9QtMtY
+	5Qf3CjoaOjP6JA4YItAKPC74TWlqv96Cp55KjiCkffOUZ9o6H1uOsM6cL0iqfZj7
+	jsNhWifNQUKbM8TdwMLppGw0HtW/C0gdIHlGBeRp8dDc2M++ScMQdak8Mi4HW+KY
+	KWLxi5U7TJ546WXFvzJTJLlwTqiLj8dCA6dioxSdGnM/d5XsUSi1kTJPZ0UPgKYt
+	YH4baqwBrcukmk0HtsNj2XDkAJsjz9LbuDPCbY44Y5nDS8+3xoL4f0oQSIApCTft
+	bhzpa10s3Q==
+	=qGAz
 	-----END PGP PUBLIC KEY BLOCK-----
