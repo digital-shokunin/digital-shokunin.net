@@ -1,52 +1,57 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
+from __future__ import unicode_literals
 
-AUTHOR = u'David Mitchell'
-SITENAME = u'Digital Shokunin'
-SITEURL = ''
+AUTHOR = 'David Mitchell'
+SITENAME = 'Digital Shokunin'
+SITEURL = 'https://digital-shokunin.net'
 
-LOCALE = 'en_US'
+PATH = 'content'
+
 TIMEZONE = 'America/New_York'
 
-DEFAULT_LANG = u'en'
+DEFAULT_LANG = 'en'
 
-THEME='subtle'
-
-#Menu items
-MENUITEMS = (('Home', 'http://digital-shokunin.net'),)
+# Feed generation is usually not desired when developing
+FEED_ALL_ATOM = None
+CATEGORY_FEED_ATOM = None
+TRANSLATION_FEED_ATOM = None
+AUTHOR_FEED_ATOM = None
+AUTHOR_FEED_RSS = None
 
 # Blogroll
-#LINKS =  (('FabLocker', 'http://www.fablocker.org'),
-#          ('PyPTUG', 'http://www.pyptug.org'),
-#          ('Pelican', 'http://docs.notmyidea.org/alexis/pelican/'),
-#          ('Python.org', 'http://python.org'),
-#         )
+#LINKS = (('Pelican', 'http://getpelican.com/'),
+#         ('Python.org', 'http://python.org/'),
+#         ('Jinja2', 'http://jinja.pocoo.org/'),
+#         ('You can modify those links in your config file', '#'),)
 
 # Social widget
 SOCIAL = (('google+','https://plus.google.com/u/0/112141969866873644503/'),
-          ('github', 'http://github.com/digital-shokunin'),
-          ('twitter', 'http://twitter.com/digitalshokunin'),
-          ('linkedin', 'http://www.linkedin.com/profile/view?id=51799602'),
-          ('lastfm', 'http://lastfm.com/user/surgeterrix'),
+          ('github', 'https://github.com/digital-shokunin'),
+          ('twitter', 'https://twitter.com/digitalshokunin'),
+          ('linkedin', 'https://www.linkedin.com/profile/view?id=51799602'),
           ('email', 'mailto:david.mitchell@digital-shokunin.net'),
          )
 
-
-# static paths will be copied under the same name
-STATIC_PATHS = ["pictures", ]
-
-# A list of files to copy from the source to the destination
-FILES_TO_COPY = (('extra/robots.txt', 'robots.txt'),
-                 ('extra/favicon.ico', 'favicon.ico'),)
-
 DEFAULT_PAGINATION = 10
+
+# Uncomment following line if you want document-relative URLs when developing
+#RELATIVE_URLS = True
 
 DISQUS_SITENAME = "digitalshokunin"
 GOOGLE_ANALYTICS = "UA-37662566-1"
-GITHUB_URL = 'http://github.com/digital-shokunin/'
+GITHUB_URL = 'https://github.com/digital-shokunin/'
 TWITTER_USERNAME = 'digitalshokunin'
 
+# static paths will be copied under the same name
+STATIC_PATHS = ["pictures", 'extra/robots.txt', 'extra/favicon.ico' ]
+
+EXTRA_PATH_METADATA = {
+    'extra/robots.txt': {'path': 'robots.txt'},
+    'extra/favicon.ico': {'path': 'favicon.ico'},
+    'pictures': {'path': 'pictures'},
+    }
 
 DELETE_OUTPUT_DIRECTORY = False
 
-SITEURL = 'http://digital-shokunin.net'
+LOAD_CONTENT_CACHE = False
