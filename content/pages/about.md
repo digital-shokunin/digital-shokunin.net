@@ -6,7 +6,7 @@ Author: David Mitchell
 Summary: About me and Digital Shokunin
 
 
-<img alt="Communing with squirrels" align=right style="padding:5px;" src='/static/pictures/david.jpg'>This site is focused on my professional and enthusiast experiences with information technology, including coding, hacking, system administration, and anything else I happen to learn or find informative in this area.
+<img alt="Communing with squirrels" align=right style="padding:5px;" src='/pictures/david.jpg'>This site is focused on my professional and enthusiast experiences with information technology, including coding, hacking, system administration, and anything else I happen to learn or find informative in this area.
 
 Professionally, I am a system administrator. I am a Puppet Certified Professional (2016) and IBM Certified Sysstem Administrator (WebSphere Application Server Network Deployment V8.5.5 and Liberty Profile). I work with Linux (and some Unixes), some Windows systems, mostly administrating middleware platforms such J2EE Application Servers and message oriented middleware (mostly the IBM WebSphere product line). I've work or have worked heavily with cloud platforms such as Eucalyptus, AWS, Digital Ocean, etc. Along with that comes some coding and programming in Java and Python, and some other shell languages such Perl, bash, even PowerShell. More recently, I've been doing DevOps work with Puppet, Ansible, and Docker. I've written in other languages in the past (Pascal, COBOL, C++, even VB .NET), but rarely have the chance or desire to use them.
 

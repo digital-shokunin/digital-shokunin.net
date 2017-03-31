@@ -10,7 +10,7 @@ I managed to make it to Vegas in a rather unexpected way, what originally
 was a planned beach trip ended up not working out, and I ended up being 
 able to join [FALE][fale] at [BSides LV][bsideslv] and [DefCon 22][defcon].
 
-<img width="600" alt="badge" src="/static/pictures/table.jpg">
+<img width="600" alt="badge" src="/pictures/table.jpg">
 
 I was working in the mornings, but most of my free time at BSides LV was 
 spent at our lockpick village where we were joined by someone making hand
@@ -31,7 +31,7 @@ but that was the sales pitch from my view. Also, there was the
 built by some people who apparently didn't have a better use for them in 
 Vegas, thus had some time on their hands. 
 
-<img width="600" alt="badge" src="/static/pictures/lockpicks.jpg">
+<img width="600" alt="badge" src="/pictures/lockpicks.jpg">
 
 There were super sensitive recruiters who get really upset when you tell 
 them that you don't like them, when asked why your refusing their stuff 
@@ -73,14 +73,14 @@ to do cool new LED patterns and to reset other badges like a Goon badge
 (attendees had a mere Human badge, where as people with special status 
 had custom badges, like Speakers, Press, etc).
 
-<img width="600" alt="badge" src="/static/pictures/badge.jpg">
+<img width="600" alt="badge" src="/pictures/badge.jpg">
 
 To be honest, the most fun was trying to figure out the badge, I attended
 some talks sure, but nothing to me is better than sitting around a table 
 trying to figure out how the thing works while drinking red bull. This
 to me is the quintessential DefCon experience I'd always heard about.
 
-<img width="600" alt="badge" src="/static/pictures/badge_hacking.jpg">
+<img width="600" alt="badge" src="/pictures/badge_hacking.jpg">
 
 I did attend some talks, still waiting for them to make it online, I also
 checked out the rest of the con, saw what there was to see, went to a few
@@ -88,7 +88,7 @@ after hours events, ate my first In and Out burger which I went to in a
 limo. I also just chilled out by the pool, especially when I managed to 
 lock myself out of the hotel room.
 
-<img width="600" alt="badge" src="/static/pictures/pool.jpg">
+<img width="600" alt="badge" src="/pictures/pool.jpg">
 
 All and all, it was a great first time experience, and I hope I can do 
 it again next year.
@@ -98,7 +98,7 @@ it again next year.
 [fale]: http://www.lockfale.com
 [bsides-talks]: http://www.irongeek.com/i.php?page=videos/bsideslasvegas2014/mainlist
 [bsideslv]: http://www.bsideslv.org/
-[bonerhenge]: /static/pictures/henge.jpg
+[bonerhenge]: /pictures/henge.jpg
 [badge-code]: https://github.com/lockfale/Defcon-22-badge
 
 
