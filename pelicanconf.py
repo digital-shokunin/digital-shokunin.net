@@ -8,6 +8,8 @@ SITEURL = 'https://digital-shokunin.net'
 
 PATH = 'content'
 
+THEME='subtle'
+
 TIMEZONE = 'America/New_York'
 
 DEFAULT_LANG = 'en'
@@ -53,5 +55,3 @@ EXTRA_PATH_METADATA = {
     }
 
 DELETE_OUTPUT_DIRECTORY = False
-
-LOAD_CONTENT_CACHE = False
