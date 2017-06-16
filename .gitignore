@@ -6,6 +6,13 @@
 #output dir
 /output
 
+#letsencrypt dir and private keys
+/letsencrypt
+lets-encrypt.txt
+/etc
+etc
+letsencrypt
+
 # Packages
 *.egg
 *.egg-info
