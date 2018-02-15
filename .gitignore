@@ -53,3 +53,6 @@ nosetests.xml
 
 #script backup
 *.sh.bck
+
+#local directory
+local
