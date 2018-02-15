@@ -10,7 +10,7 @@ I've recently been using [radare2](http://radare.org/) for a bit of reverse engi
 
 I discovered [Cutter](https://github.com/radareorg/cutter) recently, which has some instructions to compile it using cmake (also qmake but I had and used cmake).
 
-The compile/build instructions make some assumptions, since they're written by devs, they assume you have all the Qt graphics libraries it uses installed. Assuming you have the build-essential package or compile tools already installed.
+The compile/build instructions make some assumptions, since they're written by devs, they assume you have all the Qt graphics libraries it uses installed. 
 
 If you're getting errors similar to:
 
@@ -26,6 +26,8 @@ or
       Qt5SvgConfig.cmake
       qt5svg-config.cmake
 
+You are lacking the necessary Qt libraries to compile Cutter.
+
  To install the packages for the Qt libraries required on Ubuntu:
 
     sudo apt-get install qtdeclarative5-dev libqt5svg5-dev
@@ -34,4 +36,4 @@ To install the packages for the Qt libraries required on Fedora:
 
     sudo dnf install qt-devel qt5-qtsvg-devel
 
-After that, the cmake instructions should work. 
+After that, the cmake instructions should work. Of course, I'm assuming you have the build-essential package or compile tools required like cmake already installed.

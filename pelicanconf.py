@@ -8,7 +8,7 @@ SITEURL = 'https://digital-shokunin.net'
 
 PATH = 'content'
 
-THEME='subtle'
+THEME='blueidea'
 
 TIMEZONE = 'America/New_York'
 
@@ -31,7 +31,7 @@ AUTHOR_FEED_RSS = None
 SOCIAL = (('google+','https://plus.google.com/u/0/112141969866873644503/'),
           ('github', 'https://github.com/digital-shokunin'),
           ('twitter', 'https://twitter.com/digitalshokunin'),
-          ('linkedin', 'https://www.linkedin.com/profile/view?id=51799602'),
+          ('linkedin', 'https://linkedin.com/in/sdavidmitchell/'),
           ('email', 'mailto:david.mitchell@digital-shokunin.net'),
          )
 
@@ -55,3 +55,5 @@ EXTRA_PATH_METADATA = {
     }
 
 DELETE_OUTPUT_DIRECTORY = False
+DISPLAY_PAGES_ON_MENU = True
+
