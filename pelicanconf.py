@@ -3,7 +3,7 @@
 from __future__ import unicode_literals
 
 AUTHOR = 'David Mitchell'
-SITENAME = 'Digital Shokunin'
+SITENAME = 'DigiSho'
 SITEURL = 'https://digital-shokunin.net'
 
 PATH = 'content'
@@ -28,9 +28,8 @@ AUTHOR_FEED_RSS = None
 #         ('You can modify those links in your config file', '#'),)
 
 # Social widget
-SOCIAL = (('google+','https://plus.google.com/u/0/112141969866873644503/'),
-          ('github', 'https://github.com/digital-shokunin'),
-          ('twitter', 'https://twitter.com/digitalshokunin'),
+SOCIAL = (('github', 'https://github.com/digital-shokunin'),
+          ('twitter', 'https://twitter.com/digish0'),
           ('linkedin', 'https://linkedin.com/in/sdavidmitchell/'),
           ('email', 'mailto:david.mitchell@digital-shokunin.net'),
          )
